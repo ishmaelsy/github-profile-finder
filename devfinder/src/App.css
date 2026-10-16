@@ -1,0 +1,159 @@
+/* App.css: styles used by MORE THAN ONE page or component.*/
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main { flex: 1; }
+.page { padding-top: 32px; padding-bottom: 48px; }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-soft);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.btn:hover { background: #eaeef2; text-decoration: none; }
+
+.btn-primary {
+  background: var(--green);
+  border-color: var(--green);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--green-hover); }
+
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* Chips (small rounded labels, used as links or tags)*/
+.chip {
+  display: inline-block;
+  padding: 3px 12px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 0.875rem;
+}
+a.chip:hover { background: var(--bg-soft); text-decoration: none; }
+
+/*Loading / error / empty boxes */
+.state-box {
+  text-align: center;
+  padding: 40px 16px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: var(--bg-soft);
+}
+.state-box p { color: var(--muted); }
+.state-box-error h2 { color: var(--danger); }
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 12px;
+  border: 3px solid var(--border);
+  border-top-color: var(--green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/*SearchBar component */
+.searchbar {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+}
+.searchbar-row { display: flex; gap: 8px; }
+.searchbar-input {
+  flex: 1;
+  min-width: 0; /* lets the input shrink on very small screens */
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+.searchbar-error {
+  margin: 6px 0 0;
+  color: var(--danger);
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+/* ProfileCard component */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  text-align: center;
+}
+.profile-card-avatar {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+.profile-card-name { margin: 0; }
+.profile-card-login { margin: 0 0 8px; color: var(--muted); font-size: 0.875rem; }
+.profile-card-bio { margin-bottom: 8px; color: var(--muted); font-size: 0.875rem; }
+.profile-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto; /* pushes the buttons to the bottom so all cards line up */
+  padding-top: 8px;
+}
+
+/* StatTile component*/
+.stat-tile {
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--bg-soft);
+  text-align: center;
+}
+.stat-tile-value { display: block; font-size: 1.35rem; font-weight: 600; }
+.stat-tile-label { color: var(--muted); font-size: 0.8rem; }
+
+/* RepoCard component */
+.repo-card {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+.repo-card-top { display: flex; align-items: center; gap: 8px; }
+.repo-card-name {
+  font-weight: 600;
+  overflow-wrap: anywhere; /* long repo names wrap instead of overflowing */
+}
+.repo-card-tag {
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.repo-card-desc { margin: 4px 0 10px; color: var(--muted); font-size: 0.9rem; }
+.repo-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.repo-card-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  border-radius: 50%;
+}
