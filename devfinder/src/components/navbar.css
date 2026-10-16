@@ -1,0 +1,56 @@
+/* navbar.css: styles for the Navbar component only. */
+
+.navbar {
+  background: var(--bg-soft);
+  border-bottom: 1px solid var(--border);
+  position: sticky; 
+  top: 0;
+  z-index: 10;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo on the left, links on the right */
+  flex-wrap: wrap;                /* on small screens the links drop under the logo */
+  gap: 8px 16px;
+  min-height: 56px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.navbar-logo:hover { text-decoration: none; }
+
+.navbar-mark {
+  background: var(--green);
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 6px;
+  font-family: monospace;
+  font-size: 0.8rem;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: var(--muted);
+  padding: 4px 0;
+  border-bottom: 2px solid transparent;
+}
+.navbar-links a:hover { color: var(--text); text-decoration: none; }
+
+/* React Router adds the class "active" to the link of the current page. */
+.navbar-links a.active {
+  color: var(--text);
+  font-weight: 500;
+  border-bottom-color: var(--green);
+}

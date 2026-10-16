@@ -1,0 +1,12 @@
+/* footer.css: styles for the Footer component only. */
+
+.footer {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 16px 0;
+}
+
+.footer p { margin: 0; }
