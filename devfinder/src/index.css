@@ -1,0 +1,52 @@
+/* index.css: GLOBAL styles. They apply to the whole app.
+   colours and basic page styles here. */
+
+
+:root {
+  --green: #1f883d;
+  --green-hover: #1a7f37;
+  --blue: #0969da;
+  --text: #1f2328;
+  --muted: #656d76;
+  --border: #d0d7de;
+  --bg: #ffffff;
+  --bg-soft: #f6f8fa;
+  --danger: #cf222e;
+  color-scheme: light;
+}
+
+/* Make width/height include padding and border. Removes a lot of layout surprises. */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin-bottom: 0.5rem; }
+h2 { font-size: 1.25rem; margin-bottom: 0.75rem; }
+h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; }
+
+/* Buttons and inputs don't copy the page font by default. This fixes that. */
+button, input, select { font: inherit; }
+
+/* A visible outline when navigating with the keyboard (Tab key). Good for accessibility. */
+:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+/* The centred column that holds the content of every page. */
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px; /* the gap from the screen edge on phones */
+}
