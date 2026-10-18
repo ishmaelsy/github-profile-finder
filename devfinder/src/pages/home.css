@@ -1,0 +1,43 @@
+/* home.css: styles for the Home page only. */
+
+.home-hero {
+  text-align: center;
+  padding: 24px 0 8px;
+}
+
+.home-subtitle {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.home-section { margin-top: 32px; }
+
+.home-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* A button that looks like a plain text link. */
+.home-clear {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.home-clear:hover { text-decoration: underline; }
+
+.home-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+.home-examples {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
