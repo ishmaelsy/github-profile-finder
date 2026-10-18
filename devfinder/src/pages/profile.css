@@ -1,0 +1,104 @@
+/* profile.css: styles for the Profile page only. */
+
+.profile-back {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
+
+.profile-header {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.profile-avatar {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  flex: none; /* never lets the avatar shrink */
+}
+
+.profile-info { min-width: 0; }
+.profile-name { margin: 0; }
+.profile-login { color: var(--muted); margin-bottom: 8px; }
+.profile-bio { margin-bottom: 8px; }
+
+.profile-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 16px;
+  margin: 0 0 12px;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.profile-repos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.profile-repos-header h2 { margin: 0; }
+
+.profile-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profile-select {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg-soft);
+  color: var(--text);
+}
+
+.profile-repo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.profile-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+/* PHONES: applies these rules only on screens 640px wide or less. */
+@media (max-width: 640px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .profile-meta,
+  .profile-actions { justify-content: center; }
+  .profile-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .profile-repo-grid { grid-template-columns: 1fr; }
+}
