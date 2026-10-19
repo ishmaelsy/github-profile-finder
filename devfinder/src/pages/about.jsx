@@ -3,8 +3,8 @@
 
 import './about.css'
 
-// Put the link to my GitHub repository here after you create it.
-const REPO_URL = 'https://github.com/'
+
+const REPO_URL = 'https://github.com/ishmaelsy/github-profile-finder';
 
 function About() {
   return (
