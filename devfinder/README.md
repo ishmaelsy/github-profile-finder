@@ -2,7 +2,7 @@
 
 DevFinder is a small React app for looking up developers on GitHub. Type a username to see their profile, stats and repositories, then save the profiles you want to come back to.
 
-**Live site:** 
+**Live site:**  https://devfinder-by-sybercodes.vercel.app/
 
 ## Features
 - Search any GitHub username (with input checking and recent searches)
