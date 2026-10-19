@@ -8,7 +8,7 @@ function Footer() {
     <footer className="footer">
       <div className="container">
         
-        <p>© {currentYear} DevFinder. Data from the GitHub API.</p>
+        <p>© {currentYear} DevFinder by Ishmael SY, Sybercodes . Data from the GitHub API.</p>
       </div>
     </footer>
   )
